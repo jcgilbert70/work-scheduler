@@ -3,6 +3,8 @@
 
 //init function to load all locally stored data
 
+// will need a time check/update
+
 // sections for each hour
 
 // input field for each hour section
