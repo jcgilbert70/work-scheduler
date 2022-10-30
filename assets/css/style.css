@@ -24,16 +24,21 @@ textarea {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  padding: 15px;
+  margin: 0px;
 }
+
+.fullDayContainer {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 
 .oneHourSection {
   border-top: 3px solid white;
-  border-left: solid;
   display: flex;
   height: 100px;
   text-align: center;
-
-
 }
 
 .hourLabel {
@@ -105,8 +110,8 @@ textarea {
   background-color: #06aed5;
   border-radius: 10px;
   color: white;
-  float: right;
-  padding: 20px;
+  float: right top;
+  padding: 5px;
 }
 
 .hideExtras {

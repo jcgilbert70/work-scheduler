@@ -2,8 +2,7 @@
 
 function init() {
     console.log("initialize function began");
-    // displays day of the week in text, month in text, and day of month number
-    $('#currentDay').text(moment().format('dddd, MMMM Do'));
+    $('#currentDay').text(moment().format('dddd, MMMM Do')); // displays day of the week in text, month in text, and day of month number
 
 
 }
@@ -16,9 +15,7 @@ function saveTask() {
     console.log("save task function began");
     console.log(this);
     var task = $(this).siblings(".description").val();
-    var hour = $this.parent().attr("id");
-    console.log(task);
-    console.log(hour);
+    var hour = $(this).parent().attr("id");
     localStorage.setItem(task, hour);
 }
 
