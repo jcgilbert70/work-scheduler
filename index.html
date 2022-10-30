@@ -15,10 +15,16 @@
 
 <body>
   <header class="jumbotron">
+    <button id="displayExtras" class="extrasBtn">Display Extras</button>
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
   </header>
+
+<!-- below section is for listing tasks that were not crossed off, and in "past" state of the updateHour function -->
+<section id="rollOverTasks hideExtras">
+  <textarea id="listOfRollOverTasks class="col-md-8 offset-md-3"></textarea>
+</section>
 
 
   <section class="fullDayContainer">
@@ -26,74 +32,74 @@
     <!-- Timeblocks go here -->
     <div id="hour-9am" class="oneHourSection">
       <h2 class="hourLabel col-md-1">9AM</h2>
-      <textarea class="taskInputArea col-md-8"></textarea>
+      <textarea class="taskInputArea col-md-10"></textarea>
       <button class="saveBtn col-md-1"></button>
-      <button class="doneBtn col-md-1"></button>
-      <button class="clearBtn col-md-1"></button>
+      <button class="doneBtn col-md-1 hideExtras"></button>
+      <button class="clearBtn col-md-1 hideExtras"></button>
     </div>
 
     <div id="hour-10am" class="oneHourSection">
       <h2 class="hourLabel col-md-1">10AM</h2>
-      <textarea class="taskInputArea col-md-8"></textarea>
+      <textarea class="taskInputArea col-md-10"></textarea>
       <button class="saveBtn col-md-1"></button>
-      <button class="doneBtn col-md-1"></button>
-      <button class="clearBtn col-md-1"></button>
+      <button class="doneBtn col-md-1 hideExtras"></button>
+      <button class="clearBtn col-md-1 hideExtras"></button>
     </div>
 
     <div id="hour-11am" class="oneHourSection">
       <h2 class="hourLabel col-md-1">11AM</h2>
-      <textarea class="taskInputArea col-md-8"></textarea>
+      <textarea class="taskInputArea col-md-10"></textarea>
       <button class="saveBtn col-md-1"></button>
-      <button class="doneBtn col-md-1"></button>
-      <button class="clearBtn col-md-1"></button>
+      <button class="doneBtn col-md-1 hideExtras"></button>
+      <button class="clearBtn col-md-1 hideExtras"></button>
     </div>
 
     <div id="hour-12pm" class="oneHourSection">
       <h2 class="hourLabel col-md-1">12PM</h2>
-      <textarea class="taskInputArea col-md-8"></textarea>
+      <textarea class="taskInputArea col-md-10"></textarea>
       <button class="saveBtn col-md-1"></button>
-      <button class="doneBtn col-md-1"></button>
-      <button class="clearBtn col-md-1"></button>
+      <button class="doneBtn col-md-1 hideExtras"></button>
+      <button class="clearBtn col-md-1 hideExtras"></button>
     </div>
 
     <div id="hour-1pm" class="oneHourSection">
       <h2 class="hourLabel col-md-1">1PM</h2>
-      <textarea class="taskInputArea col-md-8"></textarea>
+      <textarea class="taskInputArea col-md-10"></textarea>
       <button class="saveBtn col-md-1"></button>
-      <button class="doneBtn col-md-1"></button>
-      <button class="clearBtn col-md-1"></button>
+      <button class="doneBtn col-md-1 hideExtras"></button>
+      <button class="clearBtn col-md-1 hideExtras"></button>
     </div>
 
     <div id="hour-2pm" class="oneHourSection">
       <h2 class="hourLabel col-md-1">2PM</h2>
-      <textarea class="taskInputArea col-md-8"></textarea>
+      <textarea class="taskInputArea col-md-10"></textarea>
       <button class="saveBtn col-md-1"></button>
-      <button class="doneBtn col-md-1"></button>
-      <button class="clearBtn col-md-1"></button>
+      <button class="doneBtn col-md-1 hideExtras"></button>
+      <button class="clearBtn col-md-1 hideExtras"></button>
     </div>
 
     <div id="hour-3pm" class="oneHourSection">
       <h2 class="hourLabel col-md-1">3PM</h2>
-      <textarea class="taskInputArea col-md-8"></textarea>
+      <textarea class="taskInputArea col-md-10"></textarea>
       <button class="saveBtn col-md-1"></button>
-      <button class="doneBtn col-md-1"></button>
-      <button class="clearBtn col-md-1"></button>
+      <button class="doneBtn col-md-1 hideExtras"></button>
+      <button class="clearBtn col-md-1 hideExtras"></button>
     </div>
 
     <div id="hour-4pm" class="oneHourSection">
       <h2 class="hourLabel col-md-1">4PM</h2>
-      <textarea class="taskInputArea col-md-8"></textarea>
+      <textarea class="taskInputArea col-md-10"></textarea>
       <button class="saveBtn col-md-1"></button>
-      <button class="doneBtn col-md-1"></button>
-      <button class="clearBtn col-md-1"></button>
+      <button class="doneBtn col-md-1 hideExtras"></button>
+      <button class="clearBtn col-md-1 hideExtras"></button>
     </div>
 
     <div id="hour-5pm" class="oneHourSection">
       <h2 class="hourLabel col-md-1">5PM</h2>
-      <textarea class="taskInputArea col-md-8"></textarea>
+      <textarea class="taskInputArea col-md-10"></textarea>
       <button class="saveBtn col-md-1"></button>
-      <button class="doneBtn col-md-1"></button>
-      <button class="clearBtn col-md-1"></button>
+      <button class="doneBtn col-md-1 hideExtras"></button>
+      <button class="clearBtn col-md-1 hideExtras"></button>
     </div>
 
   </section>

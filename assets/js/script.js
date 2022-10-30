@@ -1,5 +1,12 @@
+function init() {
+// displays day of the week in text, month in text, and day of month number
+$('#currentDay').text(moment().format('dddd, MMMM Do'));
 
-// need class/ID to reference with $, timer format:  moment().format('dddd, MMMM Do')
+
+}
+
+
+
 
 //init function to load all locally stored data
 
@@ -11,5 +18,18 @@
 
 // a button within each hour section to save entered within input field locally stored
 
-// as moment.js clock passes current hour block, change colors ***  CHECK README FOR COLORS ***
-// need a variable that equal moment.js current hour timer "var XYZ = moment().hour()"? 
+ 
+function updateHour() { // this function needs to run frequently, set interval?
+var currentTime = moment().hours(); // this uses moment.js up to date and time "hour" for keeping hour blocks up to date
+
+
+// need code to update time blocks, use given css styles of past present and future
+
+}
+
+
+// set time interval
+updateHour();
+
+
+init();

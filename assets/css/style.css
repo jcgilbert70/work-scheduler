@@ -6,7 +6,8 @@ body {
   line-height: 1;
 }
 
-textarea { /* text area currently only used for hour block text areas */
+textarea {
+  /* text area currently only used for hour block text areas */
   background: transparent;
   background-color: rgb(194, 194, 194);
   border: none;
@@ -16,7 +17,8 @@ textarea { /* text area currently only used for hour block text areas */
   padding: 10px;
 }
 
-.jumbotron { /* This is the header */
+.jumbotron {
+  /* This is the header */
   text-align: center;
   background-color: transparent;
   color: black;
@@ -25,19 +27,20 @@ textarea { /* text area currently only used for hour block text areas */
 }
 
 .oneHourSection {
-  
   border-top: 3px solid white;
   border-left: solid;
   display: flex;
   height: 100px;
   text-align: center;
-  
+
 
 }
 
 .hourLabel {
   border-top: dashed 1px;
+  font-weight: bold;
   font-size: 20px;
+  padding-top: 40px;
 }
 
 .description {
@@ -61,22 +64,26 @@ textarea { /* text area currently only used for hour block text areas */
   border-top: 1px dashed #000000;
 }
 
-.past { /* for background color if hour section has already passed */
+.past {
+  /* for background color if hour section has already passed */
   background-color: #d3d3d3;
   color: white;
 }
 
-.present { /* for background color if hour section is the current hour */
+.present {
+  /* for background color if hour section is the current hour */
   background-color: #ff6961;
   color: white;
 }
 
-.future { /* for background color if hour section is still in the future */
+.future {
+  /* for background color if hour section is still in the future */
   background-color: #77dd77;
   color: white;
 }
 
-.saveBtn { /* styling for the save button needed at right side of hour section */
+.saveBtn {
+  /* styling for the save button needed at right side of hour section */
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -84,7 +91,17 @@ textarea { /* text area currently only used for hour block text areas */
   color: white;
 }
 
-.saveBtn i:hover { /* maybe do a background color change on hover */
+.saveBtn i:hover {
+  /* maybe do a background color change on hover */
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.extrasBtn {
+  float: right;
+  padding: 20px;
+}
+
+.hideExtras {
+  display: none;
 }
