@@ -91,13 +91,20 @@ textarea {
   color: white;
 }
 
+.saveBtn:hover,
+.extrasBtn:hover {
+  background-color: aqua;
+}
+
 .saveBtn i:hover {
-  /* maybe do a background color change on hover */
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
 
 .extrasBtn {
+  background-color: #06aed5;
+  border-radius: 10px;
+  color: white;
   float: right;
   padding: 20px;
 }

@@ -1,12 +1,26 @@
+
+
 function init() {
-// displays day of the week in text, month in text, and day of month number
-$('#currentDay').text(moment().format('dddd, MMMM Do'));
+    console.log("initialize function began");
+    // displays day of the week in text, month in text, and day of month number
+    $('#currentDay').text(moment().format('dddd, MMMM Do'));
 
 
 }
 
 
 
+
+
+function saveTask() {
+    console.log("save task function began");
+    console.log(this);
+    var task = $(this).siblings(".description").val();
+    var hour = $this.parent().attr("id");
+    console.log(task);
+    console.log(hour);
+    localStorage.setItem(task, hour);
+}
 
 //init function to load all locally stored data
 
@@ -18,18 +32,35 @@ $('#currentDay').text(moment().format('dddd, MMMM Do'));
 
 // a button within each hour section to save entered within input field locally stored
 
- 
+
 function updateHour() { // this function needs to run frequently, set interval?
-var currentTime = moment().hours(); // this uses moment.js up to date and time "hour" for keeping hour blocks up to date
-
-
-// need code to update time blocks, use given css styles of past present and future
+    console.log("update hour function began")
+    var currentTime = moment().hours(); // this uses moment.js up to date and time "hour" for keeping hour blocks up to date
+    // need code to update time blocks, use given css styles of past present and future
 
 }
+
+
+
+
+
+function showExtras() {
+    console.log("show extras function began")
+    $(document).removeClass('hideExtras');
+}
+
+$('.extrasBtn').on('click', showExtras());
+
+
+
+
+
+
 
 
 // set time interval
 updateHour();
 
+$('.saveBtn').on('click', saveTask());
 
 init();
