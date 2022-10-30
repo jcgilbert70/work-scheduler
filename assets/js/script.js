@@ -11,13 +11,9 @@ function init() {
 
 
 
-function saveTask() {
-    console.log("save task function began");
-    console.log(this);
-    var task = $(this).siblings(".description").val();
-    var hour = $(this).parent().attr("id");
-    localStorage.setItem(task, hour);
-}
+
+   
+
 
 //init function to load all locally stored data
 
@@ -58,6 +54,13 @@ $('.extrasBtn').on('click', showExtras());
 // set time interval
 updateHour();
 
-$('.saveBtn').on('click', saveTask());
+$(".saveBtn").on("click", function () {
+    console.log("save task button pushed");
+    console.log(this);
+    var task = $(this).siblings(".description").val();
+    var hour = $(this).parent().attr("id");
+    localStorage.setItem(task, hour);
+})
+
 
 init();
