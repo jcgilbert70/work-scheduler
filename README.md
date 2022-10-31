@@ -17,6 +17,14 @@ I have added comments to more easily understand what each block of code is doing
 
 <img src="./assets/img/screenshot.png">
 
+## Link to Application
+
+https://jcgilbert70.github.io/work-scheduler/
+
+## Link to Repository
+
+https://github.com/jcgilbert70/work-scheduler.git
+
 ## Acceptance Criteria
 
 ```md
