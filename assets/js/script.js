@@ -24,64 +24,52 @@ function init() {
     console.log("initialize function began");
     $('#currentDay').text(moment().format('dddd, MMMM Do')); // displays day of the week in text, month in text, and day of month number
 
-// display old tasks
-workHourArray.forEach(".taskInputArea").val(localStorage.getItem)
-
-
+    // display old tasks
+  
 }
-
-
-
-//init function to load all locally stored data
-
-// will need a time check/update
-
-// sections for each hour
-
-// input field for each hour section
-
-// a button within each hour section to save entered within input field locally stored
 
 
 function updateHour() { // this function needs to run frequently, set interval?
     console.log("update hour function ran");
     var currentTime = moment().hours();
     console.log("The current hour is: " + currentTime) // this uses moment.js up to date and time "hour" for keeping hour blocks up to date
-   
-    for (i = 0; i < workHourArray.length; i++) {
-        workHourArray[i].removeClass('past present future');
 
+    for (i = 0; i < workHourArray.length; i++) {
+        console.log("This hour section and its value: " + workHourArray[i].attr('id') + " and hour value is " + workHourArray[i].data('hour'))
+
+        workHourArray[i].removeClass('past present future'); // removes any of the past present or future styles
         if (currentTime > workHourArray[i].data('hour')) {
             workHourArray[i].addClass('past');
-            console.log("work hour array is: " + workHourArray[i] + "and in the past")
+            console.log("work hour array value is: " + workHourArray[i].data('hour') + " and in the past")
 
         } else if (currentTime === workHourArray[i].data('hour')) {
             workHourArray[i].addClass('present');
-            console.log("work hour array is: " + workHourArray[i] + "and is current")
+            console.log("work hour array value is: " + workHourArray[i].data('hour') + " and in the present")
 
         } else (workHourArray[i].addClass('future'));
-        console.log("work hour array is: " + workHourArray[i] + "and in the future")
+        console.log("work hour array value is: " + workHourArray[i].data('hour') + " and in the future")
     }
 }
 
-
-
-
+/*
 $('.extrasBtn').on('click', function () {
     console.log("show extras function began");
-    $('.document').removeClass('hideExtras');
+    $('.body').removeClass('hideExtras');
 })
+*/
 
 $(".saveBtn").on("click", function () {
     console.log("save task button pushed");
-    console.log(this);
-    var task = $(this).siblings(".textInputArea").val();
-    var hour = $(this).parent().attr("id");
-    localStorage.setItem(task, hour);
+    var task = $(this).siblings('.taskInputArea').val();
+    var hour = $(this).parent().attr('id');
+    localStorage.setItem(hour, task);
+    console.log(task)
+    console.log(hour)
 })
+
+
+init();
 
 // set time interval
 updateHour();
 setInterval(updateHour, 15000);
-
-init();
