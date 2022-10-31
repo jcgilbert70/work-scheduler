@@ -28,6 +28,10 @@ textarea {
   margin: 0px;
 }
 
+#rollOverTasks {
+  margin-top: 10px;
+}
+
 .fullDayContainer {
   padding-left: 30px;
   padding-right: 30px;
@@ -110,4 +114,10 @@ textarea {
 
 .hideExtras {
   display: none;
+}
+
+.saveBtnExtra {
+  border-left: 1px solid black;
+  background-color: #06aed5;
+  color: white;
 }
